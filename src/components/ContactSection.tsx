@@ -57,7 +57,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledProduct
 
   const handleFormSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    handleWhatsAppSend();
   };
 
   return (
@@ -71,7 +71,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledProduct
             Hablemos de tu visión
           </h2>
           <p className="mt-3 text-base text-[#5b668a]">
-            Escribinos por WhatsApp o completá el formulario y te contactamos en el día desde nuestro salón en Las Heras.
+            Completá tus datos y enviá tu consulta por WhatsApp. Te respondemos en el día desde nuestro salón en Las Heras.
           </p>
         </div>
 
@@ -84,11 +84,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledProduct
                   <CheckCircle2 className="w-8 h-8" />
                 </div>
                 <h3 className="font-editorial text-3xl font-bold text-[#07115c]">
-                  ¡Mensaje Enviado!
+                  ¡Ya casi está!
                 </h3>
                 <p className="text-xs sm:text-sm text-[#5b668a] max-w-sm mx-auto leading-relaxed">
-                  Gracias por comunicarte con Óptica Modo. Te responderemos a la brevedad para coordinar
-                  tu atención en <strong>Río Diamante 2700, Las Heras</strong>.
+                  Se abrió WhatsApp con tu consulta armada. Enviá el mensaje desde ahí para que nos llegue
+                  y coordinemos tu atención en <strong>Río Diamante 2700, Las Heras</strong>.
+                  {filePreview && ' No te olvides de adjuntar la foto de tu receta en el chat.'}
                 </p>
                 <div className="pt-3">
                   <button
@@ -195,21 +196,13 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledProduct
                   />
                 </div>
 
-                <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
+                <div className="pt-2">
                   <button
-                    type="button"
-                    onClick={handleWhatsAppSend}
-                    className="flex-1 py-3 px-5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-md cursor-pointer"
+                    type="submit"
+                    className="w-full py-3 px-5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-md cursor-pointer"
                   >
                     <WhatsAppIcon className="w-4 h-4" />
                     <span>Enviar directo por WhatsApp</span>
-                  </button>
-
-                  <button
-                    type="submit"
-                    className="py-3 px-6 rounded-full bg-[#0a1668] hover:bg-[#123a9e] text-white text-xs font-semibold transition-colors cursor-pointer"
-                  >
-                    Enviar Mensaje
                   </button>
                 </div>
               </form>
