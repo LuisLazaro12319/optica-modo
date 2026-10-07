@@ -1,0 +1,6 @@
+{
+  "name": "Óptica Modo | Las Heras, Mendoza",
+  "description": "Óptica Modo en Las Heras, Mendoza. Armazones recetados, lentes de sol, cristales multifocales, examen visual y taller óptico en Río Diamante 2700.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
