@@ -243,8 +243,8 @@ export const STORE_CONTACT = {
   mapsUrl: 'https://maps.app.goo.gl/rHSsK7Ab4pndSJuL9',
   instagramUrl: 'https://www.instagram.com/opticamodo/',
   instagramHandle: '@opticamodo',
-  whatsappNumber: '5492613000000',
-  whatsappDisplay: '+54 9 261 300-0000',
+  whatsappNumber: '5492617153107',
+  whatsappDisplay: '+54 9 261 715-3107',
   phone: '261 429-0000',
   coordinates: {
     lat: -32.8466293,
