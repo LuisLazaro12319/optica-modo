@@ -3,7 +3,7 @@ import { STORE_CONTACT } from '../data/opticaData';
 import { MapPin, Volume2, VolumeX, Sparkles } from 'lucide-react';
 import { WhatsAppIcon } from './BrandIcons';
 
-const HERO_VIDEO = `${import.meta.env.BASE_URL}videos/hero-video.mp4`;
+const HERO_VIDEO = `${import.meta.env.BASE_URL}videos/hero-optica-modo.mp4`;
 
 interface HeroProps {
   onNavigateSection: (id: string) => void;
