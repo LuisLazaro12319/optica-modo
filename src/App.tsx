@@ -31,10 +31,7 @@ export default function App() {
   return (
     <div className="min-h-screen flex flex-col bg-white text-[#0b1230]">
       {/* Top Navy Gradient Header */}
-      <Navbar
-        onNavigateSection={scrollToSection}
-        onOpenContact={() => scrollToSection('contacto')}
-      />
+      <Navbar onNavigateSection={scrollToSection} />
 
       {/* Main Content Sections inspired by opticavision.com.ar */}
       <main className="flex-1">
@@ -77,13 +74,11 @@ export default function App() {
           )}`}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white px-5 py-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 hover:scale-105"
+          className="w-14 h-14 flex items-center justify-center bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 hover:scale-105"
           title="WhatsApp Óptica Modo"
+          aria-label="WhatsApp Óptica Modo"
         >
-          <WhatsAppIcon className="w-6 h-6" />
-          <span className="text-xs font-bold whitespace-nowrap hidden sm:inline">
-            WhatsApp Óptica Modo
-          </span>
+          <WhatsAppIcon className="w-7 h-7" />
         </a>
       </aside>
     </div>

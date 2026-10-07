@@ -5,10 +5,9 @@ import { WhatsAppIcon, InstagramIcon } from './BrandIcons';
 
 interface NavbarProps {
   onNavigateSection: (sectionId: string) => void;
-  onOpenContact: () => void;
 }
 
-export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection, onOpenContact }) => {
+export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection }) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [status, setStatus] = useState(() => getStoreStatus());
 
@@ -162,13 +161,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection, onOpenContact
 
           {/* Action Zone: Contacto Button */}
           <div className="flex items-center gap-3">
-            <button
-              onClick={onOpenContact}
-              className="px-5 py-2 rounded-full border-[1.5px] border-white/60 text-white text-[13px] font-semibold hover:bg-white hover:text-[#0a1668] transition-all cursor-pointer shadow-sm"
-            >
-              Contacto
-            </button>
-
             {/* Mobile Trigger */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
