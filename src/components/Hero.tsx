@@ -13,13 +13,15 @@ import {
 } from 'lucide-react';
 import { getCustomVideo, saveCustomVideo, clearCustomVideo } from '../utils/videoStorage';
 
+const DEFAULT_VIDEO = `${import.meta.env.BASE_URL}videos/hero-video.mp4`;
+
 interface HeroProps {
   onNavigateSection: (id: string) => void;
   onOpenContact: () => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ onNavigateSection, onOpenContact }) => {
-  const [videoSrc, setVideoSrc] = useState<string>('/videos/hero-video.mp4');
+  const [videoSrc, setVideoSrc] = useState<string>(DEFAULT_VIDEO);
   const [isMuted, setIsMuted] = useState<boolean>(true);
   const [hasCustomVideo, setHasCustomVideo] = useState<boolean>(false);
   const [isPlaying, setIsPlaying] = useState<boolean>(true);
@@ -79,7 +81,7 @@ export const Hero: React.FC<HeroProps> = ({ onNavigateSection, onOpenContact }) 
 
   const handleResetDefault = async () => {
     await clearCustomVideo();
-    setVideoSrc('/videos/hero-video.mp4');
+    setVideoSrc(DEFAULT_VIDEO);
     setHasCustomVideo(false);
     setIsMuted(true);
     if (videoRef.current) {

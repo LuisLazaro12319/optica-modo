@@ -1,6 +1,7 @@
 import React from 'react';
 import { STORE_CONTACT } from '../data/opticaData';
 import { ShieldCheck, Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
+import workshopImage from '../assets/images/optica_workshop_lab_1791385422221.jpg';
 
 interface LaboratorySectionProps {
   onOpenContact: () => void;
@@ -14,7 +15,7 @@ export const LaboratorySection: React.FC<LaboratorySectionProps> = ({ onOpenCont
     >
       {/* Background imagery with measured gradient overlay */}
       <img
-        src="/src/assets/images/optica_workshop_lab_1791385422221.jpg"
+        src={workshopImage}
         alt="Taller Óptico y Laboratorio de Cristales Óptica Modo"
         className="absolute inset-0 w-full h-full object-cover opacity-25"
       />
