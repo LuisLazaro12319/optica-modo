@@ -1,6 +1,7 @@
 import React from 'react';
 import { STORE_CONTACT } from '../data/opticaData';
-import { MapPin, Instagram, MessageCircle, ExternalLink, ShieldCheck } from 'lucide-react';
+import { MapPin, ExternalLink, ShieldCheck } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './BrandIcons';
 
 interface FooterProps {
   onNavigateSection: (id: string) => void;
@@ -33,28 +34,31 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenContact
                 href={STORE_CONTACT.instagramUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white flex items-center justify-center hover:scale-110 transition-transform"
                 title="Instagram @opticamodo"
+                aria-label="Instagram @opticamodo"
               >
-                <Instagram className="w-4 h-4 text-rose-300" />
+                <InstagramIcon className="w-[18px] h-[18px]" />
               </a>
               <a
                 href={`https://wa.me/${STORE_CONTACT.whatsappNumber}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-white flex items-center justify-center hover:scale-110 transition-all"
                 title="WhatsApp Óptica Modo"
+                aria-label="WhatsApp Óptica Modo"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-300" />
+                <WhatsAppIcon className="w-5 h-5" />
               </a>
               <a
                 href={STORE_CONTACT.mapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+                className="w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
                 title="Google Maps"
+                aria-label="Google Maps"
               >
-                <MapPin className="w-4 h-4 text-[#8ab6ff]" />
+                <MapPin className="w-[18px] h-[18px] text-[#8ab6ff]" />
               </a>
             </div>
           </div>
@@ -69,14 +73,6 @@ export const Footer: React.FC<FooterProps> = ({ onNavigateSection, onOpenContact
                   className="hover:text-white transition-colors cursor-pointer"
                 >
                   Home
-                </button>
-              </li>
-              <li>
-                <button
-                  onClick={() => onNavigateSection('productos')}
-                  className="hover:text-white transition-colors cursor-pointer"
-                >
-                  Productos
                 </button>
               </li>
               <li>

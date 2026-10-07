@@ -1,6 +1,7 @@
 import React from 'react';
 import { STORE_CONTACT } from '../data/opticaData';
-import { ShieldCheck, Sparkles, MessageCircle, ArrowRight } from 'lucide-react';
+import { ShieldCheck, Sparkles, ArrowRight } from 'lucide-react';
+import { WhatsAppIcon } from './BrandIcons';
 import workshopImage from '../assets/images/optica_workshop_lab_1791385422221.jpg';
 
 interface LaboratorySectionProps {
@@ -95,7 +96,7 @@ export const LaboratorySection: React.FC<LaboratorySectionProps> = ({ onOpenCont
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-full bg-[#00b9f2] hover:bg-[#33c8f7] text-[#020517] font-bold text-xs transition-colors flex items-center gap-2"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 <span>Cotizar Cristales por WhatsApp</span>
               </a>
 

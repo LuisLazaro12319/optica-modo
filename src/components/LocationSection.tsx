@@ -8,10 +8,10 @@ import {
   Check,
   ExternalLink,
   Phone,
-  MessageCircle,
   Car,
   Bus,
 } from 'lucide-react';
+import { WhatsAppIcon } from './BrandIcons';
 
 export const LocationSection: React.FC = () => {
   const [copied, setCopied] = useState(false);
@@ -147,7 +147,7 @@ export const LocationSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="px-5 py-2.5 rounded-full border border-[#2584fe] text-[#2584fe] hover:bg-[#f0f5ff] text-xs font-semibold flex items-center gap-1.5 transition-colors"
               >
-                <MessageCircle className="w-3.5 h-3.5 text-emerald-600" />
+                <WhatsAppIcon className="w-3.5 h-3.5 text-emerald-600" />
                 <span>WhatsApp</span>
               </a>
 

@@ -7,7 +7,6 @@ import React from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { BrandMarquee } from './components/BrandMarquee';
-import { ProductSection } from './components/ProductSection';
 import { LaboratorySection } from './components/LaboratorySection';
 import { HealthInsuranceSection } from './components/HealthInsuranceSection';
 import { LocationSection } from './components/LocationSection';
@@ -15,7 +14,7 @@ import { StyleAdvisorSection } from './components/StyleAdvisorSection';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { STORE_CONTACT } from './data/opticaData';
-import { MessageCircle } from 'lucide-react';
+import { WhatsAppIcon } from './components/BrandIcons';
 
 export default function App() {
   const scrollToSection = (sectionId: string) => {
@@ -47,9 +46,6 @@ export default function App() {
 
         {/* Brands Ribbon */}
         <BrandMarquee />
-
-        {/* Section 2: "Todo para tu Visión" (4 Pillars + Product Showcase without cart) */}
-        <ProductSection />
 
         {/* Section 3: "Laboratorio Óptico & Cristales HD" (Modeled after Widefield) */}
         <LaboratorySection onOpenContact={() => scrollToSection('contacto')} />
@@ -84,7 +80,7 @@ export default function App() {
           className="flex items-center gap-2.5 bg-[#25D366] hover:bg-[#20ba5a] text-white px-5 py-3 rounded-full shadow-xl hover:shadow-2xl transition-all duration-200 hover:scale-105"
           title="WhatsApp Óptica Modo"
         >
-          <MessageCircle className="w-5 h-5 fill-white" />
+          <WhatsAppIcon className="w-6 h-6" />
           <span className="text-xs font-bold whitespace-nowrap hidden sm:inline">
             WhatsApp Óptica Modo
           </span>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { STORE_CONTACT } from '../data/opticaData';
-import { Sparkles, MessageCircle, Check, ArrowRight, UserCheck } from 'lucide-react';
+import { Sparkles, Check, ArrowRight, UserCheck } from 'lucide-react';
+import { WhatsAppIcon } from './BrandIcons';
 
 export const StyleAdvisorSection: React.FC = () => {
   const [selectedShape, setSelectedShape] = useState<string>('redondo');
@@ -135,7 +136,7 @@ export const StyleAdvisorSection: React.FC = () => {
               rel="noopener noreferrer"
               className="px-6 py-2.5 rounded-full bg-[#2584fe] hover:bg-[#126fe8] text-white text-xs font-semibold flex items-center gap-2 transition-colors cursor-pointer shadow-sm w-full sm:w-auto justify-center"
             >
-              <MessageCircle className="w-4 h-4" />
+              <WhatsAppIcon className="w-4 h-4" />
               <span>Consultar con un Óptico</span>
             </a>
           </div>

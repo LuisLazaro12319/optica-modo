@@ -1,6 +1,7 @@
 import React from 'react';
 import { HEALTH_INSURANCES, STORE_CONTACT } from '../data/opticaData';
-import { ShieldCheck, MessageCircle, FileText, ArrowRight } from 'lucide-react';
+import { ShieldCheck, FileText, ArrowRight } from 'lucide-react';
+import { WhatsAppIcon } from './BrandIcons';
 
 export const HealthInsuranceSection: React.FC = () => {
   return (
@@ -33,7 +34,7 @@ export const HealthInsuranceSection: React.FC = () => {
                 rel="noopener noreferrer"
                 className="px-6 py-3 rounded-full bg-white hover:bg-zinc-100 text-[#0a1668] font-bold text-xs transition-colors flex items-center gap-2 shadow-sm"
               >
-                <MessageCircle className="w-4 h-4 text-emerald-600" />
+                <WhatsAppIcon className="w-4 h-4 text-emerald-600" />
                 <span>Consultar por mi Obra Social</span>
               </a>
             </div>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { STORE_CONTACT, getStoreStatus } from '../data/opticaData';
-import { MapPin, Clock, MessageCircle, Menu, X, ArrowUpRight, Phone } from 'lucide-react';
+import { MapPin, Clock, Menu, X } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './BrandIcons';
 
 interface NavbarProps {
   onNavigateSection: (sectionId: string) => void;
@@ -61,10 +62,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection, onOpenContact
               href={STORE_CONTACT.instagramUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-zinc-300 hover:text-white transition-colors flex items-center gap-1"
+              className="text-zinc-300 hover:text-white transition-colors flex items-center gap-1.5"
             >
+              <InstagramIcon className="w-3.5 h-3.5 text-[#e1306c]" />
               <span>{STORE_CONTACT.instagramHandle}</span>
-              <ArrowUpRight className="w-3 h-3 text-[#2584fe]" />
             </a>
           </div>
         </div>
@@ -110,12 +111,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection, onOpenContact
               Home
             </button>
             <button
-              onClick={() => handleNav('productos')}
-              className="text-[14px] font-medium text-white/85 hover:text-white transition-colors cursor-pointer"
-            >
-              Productos
-            </button>
-            <button
               onClick={() => handleNav('laboratorio')}
               className="text-[14px] font-medium text-white/85 hover:text-white transition-colors cursor-pointer"
             >
@@ -147,22 +142,20 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection, onOpenContact
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram @opticamodo"
-                className="text-white hover:text-[#8ab6ff] transition-colors"
+                title="Instagram @opticamodo"
+                className="w-9 h-9 rounded-full flex items-center justify-center text-white shadow-md bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5] hover:scale-110 transition-transform"
               >
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" strokeWidth="1.8">
-                  <rect x="3" y="3" width="18" height="18" rx="5"></rect>
-                  <circle cx="12" cy="12" r="4"></circle>
-                  <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" stroke="none"></circle>
-                </svg>
+                <InstagramIcon className="w-[18px] h-[18px]" />
               </a>
               <a
                 href={`https://wa.me/${STORE_CONTACT.whatsappNumber}?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="WhatsApp Óptica Modo"
-                className="text-white hover:text-emerald-300 transition-colors"
+                title="WhatsApp Óptica Modo"
+                className="w-9 h-9 rounded-full flex items-center justify-center text-white shadow-md bg-[#25D366] hover:bg-[#20ba5a] hover:scale-110 transition-all"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-5 h-5" />
               </a>
             </span>
           </nav>
@@ -198,12 +191,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection, onOpenContact
                 Home
               </button>
               <button
-                onClick={() => handleNav('productos')}
-                className="text-left py-1 text-white/80 hover:text-white"
-              >
-                Productos
-              </button>
-              <button
                 onClick={() => handleNav('laboratorio')}
                 className="text-left py-1 text-white/80 hover:text-white"
               >
@@ -234,10 +221,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onNavigateSection, onOpenContact
                 href={`https://wa.me/${STORE_CONTACT.whatsappNumber}?text=${whatsappMessage}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-2.5 bg-emerald-600 text-white rounded-full text-xs font-bold"
+                className="w-full flex items-center justify-center gap-2 py-2.5 bg-[#25D366] text-white rounded-full text-xs font-bold"
               >
-                <MessageCircle className="w-4 h-4" />
+                <WhatsAppIcon className="w-4 h-4" />
                 <span>WhatsApp Óptica Modo</span>
+              </a>
+              <a
+                href={STORE_CONTACT.instagramUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full flex items-center justify-center gap-2 py-2.5 bg-gradient-to-r from-[#d62976] to-[#4f5bd5] text-white rounded-full text-xs font-bold"
+              >
+                <InstagramIcon className="w-4 h-4" />
+                <span>Instagram {STORE_CONTACT.instagramHandle}</span>
               </a>
               <a
                 href={STORE_CONTACT.mapsUrl}

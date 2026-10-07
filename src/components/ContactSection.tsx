@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { STORE_CONTACT } from '../data/opticaData';
-import { MessageCircle, MapPin, Instagram, Phone, Upload, CheckCircle2, ArrowRight } from 'lucide-react';
+import { MapPin, Phone, Upload, CheckCircle2, ArrowRight } from 'lucide-react';
+import { WhatsAppIcon, InstagramIcon } from './BrandIcons';
 
 interface ContactSectionProps {
   prefilledProduct?: string;
@@ -200,7 +201,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledProduct
                     onClick={handleWhatsAppSend}
                     className="flex-1 py-3 px-5 rounded-full bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold flex items-center justify-center gap-2 transition-colors shadow-md cursor-pointer"
                   >
-                    <MessageCircle className="w-4 h-4" />
+                    <WhatsAppIcon className="w-4 h-4" />
                     <span>Enviar directo por WhatsApp</span>
                   </button>
 
@@ -242,8 +243,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledProduct
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-white border border-[#e7ecf7] text-emerald-600 flex items-center justify-center shrink-0">
-                    <MessageCircle className="w-4 h-4" />
+                  <div className="w-8 h-8 rounded-full bg-[#25D366] text-white flex items-center justify-center shrink-0">
+                    <WhatsAppIcon className="w-4 h-4" />
                   </div>
                   <div>
                     <strong className="text-[#07115c] block">WhatsApp Oficial</strong>
@@ -253,8 +254,8 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledProduct
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-8 h-8 rounded-full bg-white border border-[#e7ecf7] text-rose-500 flex items-center justify-center shrink-0">
-                    <Instagram className="w-4 h-4" />
+                  <div className="w-8 h-8 rounded-full bg-gradient-to-tr from-[#feda75] via-[#d62976] to-[#4f5bd5] text-white flex items-center justify-center shrink-0">
+                    <InstagramIcon className="w-4 h-4" />
                   </div>
                   <div>
                     <strong className="text-[#07115c] block">Instagram Oficial</strong>
