@@ -61,16 +61,19 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ prefilledProduct
   };
 
   return (
-    <section id="contacto" className="bg-white py-20 px-4 sm:px-6">
+    <section
+      id="contacto"
+      className="py-20 px-4 sm:px-6 bg-gradient-to-b from-[#123a9e] to-[#0a1668]"
+    >
       <div className="max-w-[1220px] mx-auto">
         <div className="max-w-2xl mx-auto text-center mb-14">
-          <span className="text-xs font-bold tracking-[2px] text-[#2584fe] uppercase block">
+          <span className="text-xs font-bold tracking-[2px] text-[#8ab6ff] uppercase block">
             CONTACTO
           </span>
-          <h2 className="font-editorial text-4xl sm:text-5xl font-bold text-[#07115c] mt-2">
+          <h2 className="font-editorial text-4xl sm:text-5xl font-bold text-white mt-2">
             Hablemos de tu visión
           </h2>
-          <p className="mt-3 text-base text-[#5b668a]">
+          <p className="mt-3 text-base text-[#c7d0ee]">
             Completá tus datos y enviá tu consulta por WhatsApp. Te respondemos en el día desde nuestro salón en Las Heras.
           </p>
         </div>
